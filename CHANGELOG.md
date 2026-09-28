@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.1] - 2026-09-28
 
 ### Fixed
+- **Credits Formatting**: Removed the dollar sign prefix (`$`) from Credits to display the exact quota balance (e.g. `171.55` instead of `$171.55`).
 - **Header Spacing**: Removed extra column gap from the header row container to match other sidebar plugins (`Token Usage`, `Gemini Usage`), ensuring a single consistent space between the title and collapsed summary.
 - **Percentage Formatting**: Formatted whole percentage values cleanly as integers (e.g. `95%` instead of `95.0%`).
 - **Standalone Packaging**: Added root entrypoint shims (`index.js`, `tui.js`, `core.js`) and inlined the server plugin definition so the package loads standalone without requiring `@opencode/plugin` in `node_modules`.

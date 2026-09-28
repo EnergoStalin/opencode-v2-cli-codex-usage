@@ -61,7 +61,7 @@ function fmtPct(pct: number): string {
 
 function fmtCredits(balance: string): string {
   const amount = Number(balance)
-  return Number.isFinite(amount) ? `$${amount.toFixed(2)}` : balance
+  return Number.isFinite(amount) ? amount.toFixed(2) : balance
 }
 
 function remainingPercent(usedPercent: number): number {
