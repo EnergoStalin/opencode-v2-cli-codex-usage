@@ -1,6 +1,6 @@
 {
   "name": "opencode-v2-cli-codex-usage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "OpenCode V2 CLI plugin that displays OpenAI Codex usage in the sidebar",
   "license": "MIT",
   "type": "module",
