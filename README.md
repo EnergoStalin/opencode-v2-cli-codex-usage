@@ -40,6 +40,21 @@ It queries the ChatGPT Codex rate-limit API and renders real-time remaining quot
 
 ## Installation
 
+The package is named `@energostalin/opencode-v2-cli-codex-usage`. The npm
+release is published using npm trusted publishing by
+`.github/workflows/publish-npm.yml`. Configure the package's trusted publisher
+on npmjs.com for GitHub owner `EnergoStalin`, repository
+`opencode-v2-cli-codex-usage`, and workflow `publish-npm.yml`, allowing
+`npm publish`. The workflow publishes with public access and npm generates
+provenance automatically.
+
+The GitHub Packages release requires npm registry configuration for the
+`@energostalin` scope and a classic GitHub token with `read:packages` access.
+The workflow in `.github/workflows/publish.yml` publishes to GitHub Packages
+manually or when a `v*` tag is pushed. Both workflows run on tag pushes; the
+tag must match the version in `package.json` (for example, `v1.0.2`). Each
+registry requires a new version for each subsequent publication.
+
 ### Option 1: Global CLI Settings (Recommended)
 
 Add the plugin to your global `~/.config/opencode/cli.json` (or `$XDG_CONFIG_HOME/opencode/cli.json`):
@@ -48,7 +63,7 @@ Add the plugin to your global `~/.config/opencode/cli.json` (or `$XDG_CONFIG_HOM
 {
   "$schema": "https://opencode.ai/v2/cli.json",
   "plugins": [
-    "opencode-v2-cli-codex-usage"
+    "@energostalin/opencode-v2-cli-codex-usage"
   ]
 }
 ```
@@ -61,7 +76,7 @@ Add the package to `plugins` in your project's `opencode.jsonc`:
 {
   "$schema": "https://opencode.ai/config.json",
   "plugins": [
-    "opencode-v2-cli-codex-usage"
+    "@energostalin/opencode-v2-cli-codex-usage"
   ]
 }
 ```
